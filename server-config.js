@@ -1,4 +1,4 @@
-var express = require('express');
+bnomvar express = require('express');
 var partials = require('express-partials');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
