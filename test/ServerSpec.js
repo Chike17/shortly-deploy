@@ -11,7 +11,7 @@ var Link = require('../app/models/link');
 // NOTE: these tests are designed for mongo!
 /////////////////////////////////////////////////////
 
-xdescribe('', function() {
+describe('', function() {
 
   beforeEach(function(done) {
     // Log out currently signed in user
@@ -54,7 +54,7 @@ xdescribe('', function() {
           .end(done);
       });
 
-      it('New links create a database entry', function(done) {
+      xit('New links create a database entry', function(done) {
         request(app)
           .post('/links')
           .send({
@@ -70,7 +70,7 @@ xdescribe('', function() {
           .end(done);
       });
 
-      it('Fetches the link url title', function(done) {
+      xit('Fetches the link url title', function(done) {
         request(app)
           .post('/links')
           .send({
@@ -88,7 +88,7 @@ xdescribe('', function() {
 
     }); // 'Shortening Links'
 
-    describe('With previously saved urls: ', function() {
+    xdescribe('With previously saved urls: ', function() {
 
       beforeEach(function(done) {
         link = new Link({
@@ -133,7 +133,7 @@ xdescribe('', function() {
 
   }); // 'Link creation'
 
-  describe('Priviledged Access:', function() {
+  xdescribe('Priviledged Access:', function() {
 
     // /*  Authentication  */
     // // TODO: xit out authentication
@@ -169,7 +169,7 @@ xdescribe('', function() {
 
   }); // 'Privileged Access'
 
-  describe('Account Creation:', function() {
+  xdescribe('Account Creation:', function() {
 
     it('Signup creates a new user', function(done) {
       request(app)
@@ -205,7 +205,7 @@ xdescribe('', function() {
 
   }); // 'Account Creation'
 
-  describe('Account Login:', function() {
+  xdescribe('Account Login:', function() {
 
     beforeEach(function(done) {
       new User({
