@@ -2,11 +2,11 @@
 var db = require('../config');
 var Link = require('../models/link');
 
-var Links = new db.collection();
+var Links = Link.collection;
 
-Links.prototype.add = function () {};
+Links.add = function () {};
 
-Links.model = Link;
+// Links.model = Link;
 
 module.exports = Links;
 

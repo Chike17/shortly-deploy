@@ -25,9 +25,12 @@ var mongoose = require('mongoose');
 //   }
 // });
 
-var User = db.model('users', {
+var Schema = mongoose.Schema;
+
+var User = new Schema({
   'id': Number,
   'username': String,
   'password': String,
 });
-module.exports = User;
+
+module.exports = mongoose.model('users', User);

@@ -9,7 +9,7 @@ var path = require('path');
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017');
+mongoose.connect('mongodb://localhost/shortly');
 
 var db = mongoose.connection;
 
@@ -17,14 +17,19 @@ db.once('open', function () {
   console.log('Am I connected??????????????');
 });
 
-db.on('error', function (error) {
-  console.log(error);
-});
-
 // var User = mongoose.model('users', {
 //   'id': Number,
 //   'username': String,
 //   'password': String,
+// });
+
+
+db.on('error', function (error) {
+  console.log(error);
+});
+
+// User.find({}).exec(function (err, data) {
+//   console.log(data);
 // });
 
 // var Link = mongoose.model('urls', {
@@ -38,18 +43,16 @@ db.on('error', function (error) {
 
 
 
-
-
 // var chike = new User({id: 1, username: 'Chike', password: 'lol'});
 
 // // STORE
 // chike.save();
 
 // // GET 
-// User.find({}).exec(function (err, data) {
+
+// User.find('user: Chike', function (err, data) {
 //   console.log(data);
 // });
-
 
 
 // var db = require('bookshelf')(knex);
